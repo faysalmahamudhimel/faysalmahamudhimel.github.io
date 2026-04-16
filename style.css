@@ -79,3 +79,8 @@ section {
   box-shadow: 0 0 25px #9d4dff;
   transform: translateY(-5px);
 }
+
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
