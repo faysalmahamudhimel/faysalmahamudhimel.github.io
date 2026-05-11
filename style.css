@@ -3,12 +3,15 @@ body {
   font-family: Arial;
   background: #0a001a;
   color: white;
+  line-height: 1.5;
 }
 
 /* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  gap: 16px;
   padding: 15px 30px;
   background: #140028;
   box-shadow: 0 0 15px #6a00ff; /* 🔥 glow */
@@ -16,8 +19,19 @@ body {
 
 .navbar a {
   color: white;
-  margin-left: 15px;
   text-decoration: none;
+}
+
+.navbar h2 {
+  margin: 0;
+}
+
+.navbar nav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 /* Hero */
@@ -25,7 +39,17 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  gap: 32px;
   padding: 60px;
+}
+
+.hero h1 {
+  margin-top: 0;
+  font-size: clamp(32px, 6vw, 56px);
+}
+
+.hero p {
+  font-size: clamp(16px, 2.5vw, 20px);
 }
 
 /* Image */
@@ -41,6 +65,7 @@ body {
   display: flex;
   justify-content: center;
   gap: 15px;
+  flex-wrap: wrap;
 }
 
 .box {
@@ -95,7 +120,8 @@ section {
   font-size: 24px;
 }
 
-.box, .card {
+.box,
+.card {
   transition: 0.3s;
 }
 
@@ -108,4 +134,78 @@ section {
 * {
   box-sizing: border-box;
   max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 16px;
+  }
+
+  .navbar nav {
+    width: 100%;
+  }
+
+  .navbar a {
+    font-size: 15px;
+  }
+
+  .hero {
+    flex-direction: column;
+    padding: 44px 20px;
+    text-align: center;
+  }
+
+  .hero img {
+    width: min(220px, 70vw);
+  }
+
+  section {
+    padding: 34px 18px;
+  }
+
+  .skills {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .certificates {
+    gap: 16px;
+  }
+
+  .certificates .card {
+    width: min(100%, 420px);
+  }
+
+  .certificates .card img {
+    height: auto;
+    max-height: 260px;
+  }
+}
+
+@media (max-width: 420px) {
+  .navbar nav {
+    gap: 10px;
+  }
+
+  .navbar a {
+    font-size: 14px;
+  }
+
+  .box,
+  .card {
+    padding: 14px 16px;
+  }
+
+  .skills {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 34px 16px;
+  }
+
+  #contact p {
+    overflow-wrap: anywhere;
+  }
 }
