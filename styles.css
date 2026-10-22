@@ -239,7 +239,7 @@ body.modal-open {
 
 .hero-text {
   position: relative;
-  order: 2;
+  order: 1;
   overflow: hidden;
   border: 1px solid rgba(51, 216, 119, 0.32);
   border-radius: var(--radius);
@@ -505,7 +505,7 @@ body.modal-open {
 
 .hero-image-wrap {
   position: relative;
-  order: 1;
+  order: 2;
   width: min(100%, 420px);
   aspect-ratio: 1 / 1;
   margin: 0 auto;
@@ -1114,6 +1114,14 @@ body.modal-open {
   object-fit: contain;
 }
 
+.calclab-banner-image {
+  width: 124%;
+  height: auto;
+  max-height: 100%;
+  padding: 0;
+  flex: 0 0 auto;
+}
+
 .project-banner span {
   position: absolute;
   top: 12px;
@@ -1135,6 +1143,16 @@ body.modal-open {
 .project-card .mini-line {
   background: var(--primary);
   box-shadow: 0 0 6px rgba(51, 216, 119, 0.7), 0 0 14px rgba(51, 216, 119, 0.38);
+}
+
+.project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+}
+
+.project-actions .project-link {
+  display: inline-block;
 }
 
 .project-link:disabled {
@@ -1577,6 +1595,15 @@ body.modal-open {
 
   .card {
     padding: 22px;
+  }
+
+  .project-banner:has(.calclab-banner-image) {
+    height: 105px;
+  }
+
+  .calclab-banner-image {
+    width: 100%;
+    max-height: none;
   }
 
   .hero-text {

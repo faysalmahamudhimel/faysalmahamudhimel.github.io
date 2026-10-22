@@ -1,6 +1,7 @@
 // Skills data rendered in the Core Expertise section.
 const expertise = [
   { name: "C", iconClass: "devicon-c-plain colored" },
+  { name: "C++", iconClass: "devicon-cplusplus-plain colored" },
   { name: "Java", iconClass: "devicon-java-plain colored" },
   { name: "HTML5", iconClass: "devicon-html5-plain colored" },
   { name: "CSS3", iconClass: "devicon-css3-plain colored" },
